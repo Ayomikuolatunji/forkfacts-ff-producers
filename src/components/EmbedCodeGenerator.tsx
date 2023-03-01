@@ -9,6 +9,7 @@ const EmbedCodeGenerator = ({ componentUrl }: EmbedCodeGeneratorProps) => {
   const theme = useTheme();
   const [iframeHeight, setIframeHeight] = useState("50vh");
   const [showSnackbar, setShowSnackbar] = useState(false);
+  const [inputUrl, setInputUrl] = useState(componentUrl);
 
   useEffect(() => {
     const handleIframeResize = () => {
@@ -25,7 +26,7 @@ const EmbedCodeGenerator = ({ componentUrl }: EmbedCodeGeneratorProps) => {
     return () => {
       window.removeEventListener("resize", handleIframeResize);
     };
-  }, [componentUrl]);
+  }, [inputUrl]);
 
   const handleCopyClick = () => {
     const el = document.createElement("textarea");
@@ -42,8 +43,12 @@ const EmbedCodeGenerator = ({ componentUrl }: EmbedCodeGeneratorProps) => {
     setShowSnackbar(false);
   };
 
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputUrl(event.target.value);
+  };
+
   const generateEmbedCode = () => {
-    return `<iframe src="${componentUrl}" style="width: 100%; height: ${iframeHeight}; border: none;"></iframe>`;
+    return `<iframe src="${inputUrl}" style="width: 100%; height: ${iframeHeight}; border: none;"></iframe>`;
   };
 
   return (
@@ -69,6 +74,7 @@ const EmbedCodeGenerator = ({ componentUrl }: EmbedCodeGeneratorProps) => {
         </li>
       </Box>
       <Box sx={{ mt: theme.spacing(2) }}>
+        <input type="text" value={inputUrl} onChange={handleInputChange} />
         <Button variant="contained" color="primary" onClick={handleCopyClick}>
           Copy Embed Code
         </Button>
