@@ -1,3 +1,4 @@
+import { Box, Typography } from "@mui/material";
 import React from "react";
 
 interface EmbedCodeGeneratorProps {
@@ -5,17 +6,25 @@ interface EmbedCodeGeneratorProps {
 }
 
 const EmbedCodeGenerator = ({ componentUrl }: EmbedCodeGeneratorProps) => {
-	const embedCode = `<iframe src="${componentUrl}" width="100%" height="300px" frameborder="0"></iframe>`;
+	const embedCode = () => {
+		return (
+			<Box
+				component="iframe"
+				src={componentUrl}
+				sx={{ width: "100%", height: "50vh", mx: "auto" }}
+				title="Iframe Example"
+			/>
+		);
+	};
 
 	return (
-		<div>
-			<h2>Embed Code Generator</h2>
-			<p>
+		<Box>
+			<Typography>
 				Copy and paste the following code into your website to embed the
 				ForkFacts component:
-			</p>
-			<textarea value={embedCode} readOnly rows={5} style={{ width: "100%" }} />
-		</div>
+			</Typography>
+			{embedCode()}
+		</Box>
 	);
 };
 
