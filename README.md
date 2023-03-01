@@ -1,49 +1,17 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# ForkFacts Embed Code Generator
 
-## 🚀 Quick start
+## Overview
+The ForkFacts Embed Code Generator is a component that allows you to embed ForkFacts content on your website. With this tool, you can generate a code snippet that can be copied and pasted into the HTML code of your website to display a ForkFacts component.
 
-1.  **Create a Gatsby site.**
+## Usage
+To use the ForkFacts Embed Code Generator, follow these steps:
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+1. Visit the ForkFacts Embed Code Generator page on the ForkFacts website.
+2. Enter the URL for the ForkFacts content you want to embed in the "Component URL" field.
+3. Click the "Generate Code" button to generate the embed code.
+4. Copy the generated embed code from the "Embed Code" section on the page.
+5. Paste the code into the HTML code of the web page where you want the ForkFacts component to appear. You can do this either by editing the HTML file directly or by using a content management system (CMS) that allows you to add custom HTML code to a page.
+6. Make sure that the code is placed in the correct location on the page. The code should be inserted into the section of the page where you want the component to appear. You may need to consult your CMS or web developer for guidance on this.
+7. Save the changes to the page and refresh it to see the embedded ForkFacts component.
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+>Please note that the height of the generated iframe is set to 50% of the viewport height (50vh) by default. Depending on the content you're embedding, this may not be enough to display everything. You may need to adjust the height accordingly to ensure that the embedded content is fully visible.
