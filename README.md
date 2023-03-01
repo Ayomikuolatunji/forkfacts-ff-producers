@@ -15,3 +15,6 @@ To use the ForkFacts Embed Code Generator, follow these steps:
 7. Save the changes to the page and refresh it to see the embedded ForkFacts component.
 
 >Please note that the height of the generated iframe is set to 50% of the viewport height (50vh) by default. Depending on the content you're embedding, this may not be enough to display everything. You may need to adjust the height accordingly to ensure that the embedded content is fully visible.
+
+## Support
+If you have any questions or issues with using the ForkFacts Embed Code Generator, please contact our support team at support@forkfacts.com. We're here to help!
