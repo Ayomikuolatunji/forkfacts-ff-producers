@@ -1,4 +1,4 @@
-import { Box, Button, Snackbar, TextField, Typography, useTheme } from "@mui/material";
+import { Box, Button, Snackbar, TextField, Typography, useMediaQuery, useTheme } from "@mui/material";
 import React, { useState, useEffect } from "react";
 
 interface EmbedCodeGeneratorProps {
@@ -7,6 +7,7 @@ interface EmbedCodeGeneratorProps {
 
 const EmbedCodeGenerator = ({ componentUrl }: EmbedCodeGeneratorProps) => {
 	const theme = useTheme();
+	const mobile = useMediaQuery(theme.breakpoints.down("md"));
 	const [iframeHeight, setIframeHeight] = useState("50vh");
 	const [showSnackbar, setShowSnackbar] = useState(false);
 	const [inputUrl, setInputUrl] = useState(componentUrl);
