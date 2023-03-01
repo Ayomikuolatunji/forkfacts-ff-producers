@@ -4,7 +4,7 @@ import EmbedCodeGenerator from "../components/EmbedCodeGenerator";
 import { Box } from "@mui/material";
 
 const IndexPage: React.FC<PageProps> = () => {
-	const componentUrl = "https://www.figma.com/file/JexGuMEfOIWqn6KX8SBy5C/Forkfacts-with-material-theme-(Copy-Colours)?node-id=5104%3A118877&t=XM2NrjxkTm34mHa5-0";
+	const componentUrl = "https://www.forkfacts-components-link";
 
 
 	return (
