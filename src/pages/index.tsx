@@ -4,7 +4,7 @@ import EmbedCodeGenerator from "../components/EmbedCodeGenerator";
 import { Box } from "@mui/material";
 
 const IndexPage: React.FC<PageProps> = () => {
-	const componentUrl = "https://www.forkfacts-components-link";
+	const componentUrl = "paste your component link here";
 
 
 	return (
