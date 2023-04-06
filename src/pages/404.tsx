@@ -40,6 +40,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
         <br />
         <Link to="/">Go home</Link>.
       </p>
+      
     </main>
   )
 }

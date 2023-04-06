@@ -46,13 +46,13 @@ const IndexPage: React.FC<PageProps> = () => {
       </Box>
       <Box
         sx={{
-          width: mobile ? "100%" : "80%",
+          width: "100%",
           ml: "auto",
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "center",
           flexDirection: "row",
           alignItems: "center",
-          mt: theme.spacing(6.5),
+          my: theme.spacing(6.5),
         }}
       >
         <Box>
@@ -66,7 +66,7 @@ const IndexPage: React.FC<PageProps> = () => {
       </Box>
       <Box
         sx={{
-          width: mobile ? "100%" : "80%",
+          width: "100%",
           ml: "auto",
           display: "flex",
           justifyContent: "flex-start",
@@ -83,4 +83,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => <title>Forkfacts producer</title>;

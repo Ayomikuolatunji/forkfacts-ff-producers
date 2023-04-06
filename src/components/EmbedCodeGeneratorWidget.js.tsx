@@ -13,24 +13,30 @@ import React, { useEffect, useState } from "react";
 interface EmbedCodeGeneratorProps {
   name: string;
   description: string;
-  url: string;
 }
 
 const EmbedCodeGeneratorWidget = ({
   name,
   description,
-  url = "https://forkfacts-v2.vercel.app/",
 }: EmbedCodeGeneratorProps) => {
   const [embedCode, setEmbedCode] = useState("");
   const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("md"));
   const [showSnackbar, setShowSnackbar] = useState(false);
 
   useEffect(() => {
-    const embedCodeTemplate = `<div style="position: relative; overflow: hidden; padding-top: 56.25%;">
-    <iframe src="${url}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
-  </div>`;
+    const embedCodeTemplate = `<div style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); width: 238px; height: auto; border-radius: 4px; background-color: #FFF;">
+        <div style="border-bottom: 1px solid #E4E1EC; padding: 8px; color: #908EA5; font-weight: 500; font-size: 16px; line-height: 24px;">
+          ${name}
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; margin-top: 48px;">
+          <img src="/Pantry.svg" alt="" />
+        </div>
+        <div style="text-align: center; padding: 16px;">${description}</div>
+      </div>`;
+
     setEmbedCode(embedCodeTemplate);
-  }, [url, name, description]);
+  }, [name, description]);
 
   const handleCopyCode = () => {
     navigator.clipboard.writeText(embedCode);
@@ -48,13 +54,14 @@ const EmbedCodeGeneratorWidget = ({
         display: "flex",
         columnGap: theme.spacing(2),
         backgroundColor: "#F2EFFF",
-        p: theme.spacing(3),
+        p: mobile ? theme.spacing(1) : theme.spacing(3),
+        flexWrap: "wrap",
       }}
     >
       <Box
         boxShadow={2}
         sx={{
-          width: theme.spacing(32.75),
+          width: mobile ? theme.spacing(52.75) : theme.spacing(32.75),
           height: "auto",
           borderRadius: theme.spacing(1),
           backgroundColor: "#FFF",
@@ -90,7 +97,7 @@ const EmbedCodeGeneratorWidget = ({
         sx={{
           display: "flex",
           flexDirection: "column",
-          width: "40%",
+          width: mobile ? "100%" : "70%",
           columnGap: theme.spacing(2),
         }}
       >
@@ -119,7 +126,7 @@ const EmbedCodeGeneratorWidget = ({
             component="textarea"
             value={embedCode}
             sx={{
-              height: theme.spacing(15),
+              height: theme.spacing(25),
               width: "100%",
               mt: theme.spacing(1),
             }}
