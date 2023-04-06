@@ -29,7 +29,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <Box
           sx={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "flex-start",
             flexDirection: "column",
             width: "100%",
             p: theme.spacing(3),
@@ -67,33 +67,6 @@ const IndexPage: React.FC<PageProps> = () => {
           >
             Try Our Recipe Nutrition generator
           </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: theme.spacing(2),
-              mt: theme.spacing(4),
-            }}
-          >
-            <FacebookShareButton
-              url={"https://www.facebook.com/"}
-              title={"Check out this website!"}
-            >
-              <Facebook style={{ width: "44px", height: "44px" }} />
-            </FacebookShareButton>
-            <TwitterShareButton
-              url={"https://twitter.com/ "}
-              title={"Check out this website!"}
-            >
-              <Twitter style={{ width: "44px", height: "44px" }} />
-            </TwitterShareButton>
-            <LinkedinShareButton
-              url={"https://www.linkedin.com/"}
-              title={"Check out this website!"}
-            >
-              <Linkedin style={{ width: "44px", height: "44px" }} />
-            </LinkedinShareButton>
-          </Box>
         </Box>
       </Box>
       <Box
