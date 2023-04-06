@@ -2,8 +2,6 @@ import {
   Box,
   Button,
   Snackbar,
-  TextareaAutosize,
-  TextField,
   Typography,
   useMediaQuery,
   useTheme,
@@ -26,13 +24,14 @@ const EmbedCodeGeneratorWidget = ({
 
   useEffect(() => {
     const embedCodeTemplate = `<div style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); width: 238px; height: auto; border-radius: 4px; background-color: #FFF;">
-        <div style="border-bottom: 1px solid #E4E1EC; padding: 8px; color: #908EA5; font-weight: 500; font-size: 16px; line-height: 24px;">
-          ${name}
+        <div style="border-bottom: 1px solid #E4E1EC; padding: 8px; color: #908EA5; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 10px; line-height: 16px; letter-spacing: 0.4px;">
+             ${name}
         </div>
         <div style="display: flex; justify-content: center; align-items: center; margin-top: 48px;">
           <img src="/Pantry.svg" alt="" />
         </div>
-        <div style="text-align: center; padding: 16px;">${description}</div>
+        <div style="text-align: center; padding: 16px; font-family: Poppins, sans-serif; font-weight: 500; font-size: 11px; line-height: 16px; letter-spacing: 0.5px;color:#1C1B1F">${description}
+        </div>
       </div>`;
 
     setEmbedCode(embedCodeTemplate);
