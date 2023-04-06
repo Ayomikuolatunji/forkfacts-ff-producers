@@ -8,7 +8,7 @@ import {
 	useTheme,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import EmbedCodeGenerator from "./EmbedCodeGenerator";
+import EmbedCodeGenerator from "./EmbedCodeGeneratorWidget.js";
 
 const RecipeForm = () => {
 	const theme = useTheme();
