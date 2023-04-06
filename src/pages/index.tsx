@@ -1,11 +1,6 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
-import {
-  TwitterShareButton,
-  FacebookShareButton,
-  LinkedinShareButton,
-} from "react-share";
 import "@fontsource/poppins";
 import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/600.css";
