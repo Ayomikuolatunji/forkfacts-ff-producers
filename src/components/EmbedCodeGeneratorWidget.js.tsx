@@ -28,7 +28,7 @@ const EmbedCodeGeneratorWidget = ({
              ${name}
         </div>
         <div style="display: flex; justify-content: center; align-items: center; margin-top: 48px;">
-          <img src=${'/Pantry.svg'} alt="" />
+          <img src=${'https://forkfacts-producers-git-main-bonsaiilabs.vercel.app/Pantry.svg'} alt="" />
         </div>
         <div style="text-align: center; padding: 16px; font-family: Poppins, sans-serif; font-weight: 500; font-size: 11px; line-height: 16px; letter-spacing: 0.5px;color:#1C1B1F">${description}
         </div>
